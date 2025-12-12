@@ -42,7 +42,7 @@
                     <p>Experimente a verdadeira culinária caseira feita com ingredientes frescos selecionados diariamente.</p>
                     <div class="hero-buttons">
                         <a href="cardapio.html" class="btn-primary">Ver Cardápio</a>
-                        <button class="btn-outline">Reservar Mesa</button>
+                        <button class="btn-outline" onclick="reservarMesa()">Reservar Mesa</button>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-primary">Fazer Reserva</button>
+                    <button class="btn-primary" onclick="reservarMesa()">Fazer Reserva</button>
                 </div>
                 <div class="location-map">
                     <iframe 
@@ -188,6 +188,11 @@
         </div>
     </footer>
 
+    <script>
+        function reservarMesa() {
+            alert('Para fazer uma reserva, entre em contato conosco:\n\n📞 Telefone: (11) 1234-5678\n📧 Email: contato@saborlocal.com.br\n\nHorário de atendimento: Seg-Sex 11h-22h | Sáb-Dom 12h-23h');
+        }
+    </script>
     <script src="js/carrinho.js"></script>
     <script src="js/nav.js"></script>
 </body>
