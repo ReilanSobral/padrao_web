@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrinho de compras - Sabor Local">
+    <title>Carrinho - Sabor Local</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navegação -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🍽️ Sabor Local</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="carrinho.html" class="active carrinho-link">
+                        Carrinho <span id="carrinho-badge" class="badge">0</span>
+                    </a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu mobile">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrinho -->
+    <section class="carrinho-page">
+        <div class="container">
+            <h1 class="page-title">Meu Carrinho</h1>
+            
+            <div id="carrinho-vazio" class="carrinho-vazio">
+                <p>Seu carrinho está vazio</p>
+                <a href="cardapio.html" class="btn-primary">Ver Cardápio</a>
+            </div>
+
+            <div id="carrinho-content" class="carrinho-content" style="display: none;">
+                <div class="carrinho-layout">
+                    <!-- Itens do Carrinho -->
+                    <div class="carrinho-itens">
+                        <h2>Itens do Pedido</h2>
+                        <div id="carrinho-lista" class="carrinho-lista">
+                            <!-- Itens serão inseridos via JavaScript -->
+                        </div>
+                        <div class="carrinho-total-item">
+                            <strong>Subtotal: R$ <span id="subtotal">0,00</span></strong>
+                        </div>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div class="carrinho-formulario">
+                        <h2>Dados para Entrega</h2>
+                        
+                        <!-- Cadastro/Login -->
+                        <div class="form-section">
+                            <h3>Dados Pessoais</h3>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                            </div>
+                        </div>
+
+                        <!-- Endereço -->
+                        <div class="form-section">
+                            <h3>Endereço de Entrega</h3>
+                            <div class="form-group">
+                                <label for="cep">CEP *</label>
+                                <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                                <small class="cep-info">Digite o CEP para preencher automaticamente</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço *</label>
+                                <input type="text" id="endereco" name="endereco" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero">Número *</label>
+                                    <input type="text" id="numero" name="numero" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" id="complemento" name="complemento">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bairro">Bairro *</label>
+                                    <input type="text" id="bairro" name="bairro" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cidade">Cidade *</label>
+                                    <input type="text" id="cidade" name="cidade" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagamento -->
+                        <div class="form-section">
+                            <h3>Forma de Pagamento</h3>
+                            <div class="form-group">
+                                <label for="pagamento">Selecione a forma de pagamento *</label>
+                                <select id="pagamento" name="pagamento" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="dinheiro">Dinheiro</option>
+                                    <option value="cartao-debito">Cartão de Débito</option>
+                                    <option value="cartao-credito">Cartão de Crédito</option>
+                                    <option value="pix">PIX</option>
+                                </select>
+                            </div>
+                            <div id="troco-container" class="form-group" style="display: none;">
+                                <label for="troco">Precisa de troco? Se sim, para quanto? *</label>
+                                <input type="text" id="troco" name="troco" placeholder="Ex: 50,00">
+                            </div>
+                        </div>
+
+                        <!-- Observações -->
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label for="observacoes">Observações</label>
+                                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Alguma observação especial?"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Total e Botão -->
+                        <div class="carrinho-resumo">
+                            <div class="resumo-item">
+                                <span>Subtotal:</span>
+                                <span>R$ <span id="resumo-subtotal">0,00</span></span>
+                            </div>
+                            <div class="resumo-item">
+                                <span>Taxa de Entrega:</span>
+                                <span>R$ <span id="taxa-entrega">5,00</span></span>
+                            </div>
+                            <div class="resumo-total">
+                                <span>Total:</span>
+                                <span>R$ <span id="resumo-total">0,00</span></span>
+                            </div>
+                            <button type="button" id="btn-finalizar" class="btn-submit">Finalizar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sabor Local. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/cardapio-data.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/carrinho-page.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
+

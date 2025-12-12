@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pedido Confirmado - Sabor Local">
+    <title>Pedido Confirmado - Sabor Local</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navegação -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🍽️ Sabor Local</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="carrinho.html" class="carrinho-link">
+                        Carrinho <span id="carrinho-badge" class="badge">0</span>
+                    </a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu mobile">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Confirmação -->
+    <section class="confirmacao-page">
+        <div class="container">
+            <div class="confirmacao-content">
+                <div class="confirmacao-icon">✅</div>
+                <h1 class="confirmacao-titulo">Pedido Confirmado!</h1>
+                <p class="confirmacao-subtitulo">Seu pedido foi recebido e está sendo preparado</p>
+                
+                <div class="pedido-info">
+                    <div class="info-box">
+                        <h3>Número do Pedido</h3>
+                        <p class="numero-pedido" id="numero-pedido">#0000</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Previsão de Entrega</h3>
+                        <p class="previsao" id="previsao-entrega">30-45 minutos</p>
+                    </div>
+                </div>
+
+                <div class="pedido-detalhes">
+                    <h2>Detalhes do Pedido</h2>
+                    
+                    <div class="detalhe-section">
+                        <h3>Dados de Entrega</h3>
+                        <div id="dados-entrega" class="detalhe-content">
+                            <!-- Preenchido via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="detalhe-section">
+                        <h3>Itens do Pedido</h3>
+                        <div id="itens-pedido" class="itens-lista">
+                            <!-- Preenchido via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="detalhe-section">
+                        <h3>Forma de Pagamento</h3>
+                        <div id="pagamento-info" class="detalhe-content">
+                            <!-- Preenchido via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="resumo-final">
+                        <div class="resumo-item">
+                            <span>Subtotal:</span>
+                            <span>R$ <span id="resumo-subtotal">0,00</span></span>
+                        </div>
+                        <div class="resumo-item">
+                            <span>Taxa de Entrega:</span>
+                            <span>R$ <span id="resumo-taxa">5,00</span></span>
+                        </div>
+                        <div class="resumo-total">
+                            <span>Total:</span>
+                            <span>R$ <span id="resumo-total">0,00</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="confirmacao-actions">
+                    <a href="index.html" class="btn-primary">Voltar ao Início</a>
+                    <a href="cardapio.html" class="btn-secondary">Fazer Novo Pedido</a>
+                </div>
+
+                <div class="info-entrega">
+                    <p>📞 Em caso de dúvidas, entre em contato: <strong>(11) 1234-5678</strong></p>
+                    <p>📧 Ou envie um email para: <strong>contato@saborlocal.com.br</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sabor Local. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/carrinho.js"></script>
+    <script src="js/confirmacao.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
+
