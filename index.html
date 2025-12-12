@@ -6,6 +6,7 @@
     <meta name="description" content="Restaurante Sabor Local - Comida caseira com ingredientes frescos">
     <title>Sabor Local - Restaurante</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header/Navegação -->
@@ -29,48 +30,79 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=2070&auto=format&fit=crop" alt="Restaurante background">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <h2>Bem-vindo ao Sabor Local</h2>
-            <p>Comida caseira com ingredientes frescos e muito sabor!</p>
-            <a href="cardapio.html" class="btn-primary">Ver Cardápio</a>
+            <div class="container">
+                <div class="hero-text">
+                    <span class="hero-badge">🏆 A Melhor Comida Caseira de SP</span>
+                    <h1>Sabor que aquece <br><span class="highlight">o coração</span></h1>
+                    <p>Experimente a verdadeira culinária caseira feita com ingredientes frescos selecionados diariamente.</p>
+                    <div class="hero-buttons">
+                        <a href="cardapio.html" class="btn-primary">Ver Cardápio</a>
+                        <button class="btn-outline">Reservar Mesa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Descubra Mais</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- Destaques -->
-    <section class="destaques">
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Por que escolher o Sabor Local?</h2>
-            <div class="destaques-grid">
-                <div class="destaque-item">
-                    <div class="destaque-icon">🥘</div>
+            <div class="features-header">
+                <span class="section-badge">Nossos Diferenciais</span>
+                <h2>Por que escolher o Sabor Local?</h2>
+                <p>Não servimos apenas comida, servimos experiências gastronômicas inesquecíveis.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🥘</div>
                     <h3>Comida Caseira</h3>
-                    <p>Receitas tradicionais preparadas com muito carinho</p>
+                    <p>Receitas tradicionais passadas de geração em geração, preparadas com o carinho que você merece.</p>
                 </div>
-                <div class="destaque-item">
-                    <div class="destaque-icon">🌱</div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
                     <h3>Ingredientes Frescos</h3>
-                    <p>Selecionamos os melhores ingredientes diariamente</p>
+                    <p>Trabalhamos apenas com produtores locais para garantir o frescor e a qualidade de cada ingrediente.</p>
                 </div>
-                <div class="destaque-item">
-                    <div class="destaque-icon">🚚</div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
                     <h3>Delivery Rápido</h3>
-                    <p>Entregamos na sua casa com agilidade e qualidade</p>
+                    <p>Seu prato favorito chega quentinho na sua casa em tempo recorde com nossa frota própria.</p>
                 </div>
-                <div class="destaque-item">
-                    <div class="destaque-icon">💚</div>
+                <div class="feature-card">
+                    <div class="feature-icon">💚</div>
                     <h3>Preço Justo</h3>
-                    <p>Qualidade e sabor por um preço acessível</p>
+                    <p>Acreditamos que comida boa não precisa ser cara. Qualidade premium com preços acessíveis.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sobre -->
-    <section class="sobre">
+    <section class="about">
         <div class="container">
-            <div class="sobre-content">
-                <div class="sobre-texto">
-                    <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" alt="Chef cozinhando">
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Clientes Felizes</span>
+                        </div>
+                        <div class="stat-stars">★★★★★</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-badge">Nossa História</span>
+                    <h2>Tradição e sabor <br><span class="highlight">em cada detalhe</span></h2>
                     <p>
                         O <strong>Sabor Local</strong> nasceu do sonho de trazer comida caseira de qualidade 
                         para a nossa comunidade. Com mais de 10 anos de experiência, preparamos cada prato 
@@ -79,12 +111,21 @@
                     <p>
                         Nossa missão é oferecer uma experiência gastronômica única, combinando tradição 
                         e inovação, sempre priorizando o sabor autêntico e o atendimento personalizado.
+                        Não é apenas sobre comer, é sobre se sentir em casa.
                     </p>
-                    <a href="cardapio.html" class="btn-secondary">Conheça Nosso Cardápio</a>
-                </div>
-                <div class="sobre-imagem">
-                    <div class="imagem-placeholder">
-                        <span>🍽️</span>
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <span class="metric-number">10+</span>
+                            <span class="metric-label">Anos de História</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-number">50+</span>
+                            <span class="metric-label">Pratos Únicos</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-number">15k</span>
+                            <span class="metric-label">Pedidos Entregues</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,27 +133,43 @@
     </section>
 
     <!-- Localização -->
-    <section class="localizacao">
+    <section class="location">
         <div class="container">
-            <h2 class="section-title">Nossa Localização</h2>
-            <div class="localizacao-content">
-                <div class="info-contato">
-                    <h3>Informações de Contato</h3>
-                    <p><strong>📍 Endereço:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
-                    <p><strong>📞 Telefone:</strong> (11) 1234-5678</p>
-                    <p><strong>📧 Email:</strong> contato@saborlocal.com.br</p>
-                    <p><strong>🕐 Horário de Funcionamento:</strong></p>
-                    <ul>
-                        <li>Segunda a Sexta: 11h às 22h</li>
-                        <li>Sábado e Domingo: 12h às 23h</li>
-                    </ul>
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Venha nos visitar</h2>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000<br>São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Seg - Sex: 11h às 22h</p>
+                                <p>Sáb - Dom: 12h às 23h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Fazer Reserva</button>
                 </div>
-                <div class="mapa-container">
+                <div class="location-map">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197584455123!2d-46.633309!3d-23.55052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                         width="100%" 
-                        height="400" 
-                        style="border:0;" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(20%) contrast(1.2) opacity(0.9);" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
