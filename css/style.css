@@ -508,7 +508,7 @@ body {
 
 /* Cardápio */
 .cardapio-page {
-    padding: 40px 0 60px;
+    padding: 120px 0 60px;
     background: var(--bg-light);
     min-height: calc(100vh - 200px);
 }
@@ -599,7 +599,7 @@ body {
 
 /* Carrinho */
 .carrinho-page {
-    padding: 40px 0 60px;
+    padding: 120px 0 60px;
     background: var(--bg-light);
     min-height: calc(100vh - 200px);
 }
@@ -1021,7 +1021,7 @@ textarea:focus-visible {
 
 /* Página de Confirmação */
 .confirmacao-page {
-    padding: 60px 0;
+    padding: 140px 0 60px;
     background: var(--bg-light);
     min-height: calc(100vh - 200px);
 }
