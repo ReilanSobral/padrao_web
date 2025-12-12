@@ -1,0 +1,10 @@
+/* Estilos personalizados para o PDF gerado pela extensão Markdown PDF */
+
+a {
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+a:hover {
+    color: darkblue !important;
+}
