@@ -271,12 +271,6 @@ body {
         transform: translateX(-50%) translateY(-5px);
     }
 }
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s;
-    box-shadow: var(--shadow);
-}
 
 .btn-primary:hover {
     transform: translateY(-2px);
@@ -1265,6 +1259,15 @@ textarea:focus-visible {
         gap: 1.5rem;
     }
 }
+
+/* Media queries para confirmação */
+@media (max-width: 768px) {
+    .confirmacao-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .confirmacao-titulo {
+        font-size: 2rem;
     }
     
     .pedido-info {
